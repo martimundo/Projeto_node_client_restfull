@@ -42,7 +42,7 @@ router.get('/:id', function (req, res, next) {
  */
 router.put('/:id', function (req, res, next) {
 
-  client.get(`/users/${req.params.id}`, req.bady, function (err, request, response, obj) {
+  client.get(`/users/${req.params.id}`, req.body, function (err, request, response, obj) {
 
     assert.ifError(err);
 
@@ -76,7 +76,7 @@ router.delete('/:id', function (req, res, next) {
 
 router.post('/', function (req, res, next) {
 
-  client.post('/users/', req.bady, function (err, request, response, obj) {
+  client.post('/users/', req.body, function (err, request, response, obj) {
 
     assert.ifError(err);
 

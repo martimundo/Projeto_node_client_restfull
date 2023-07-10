@@ -23,16 +23,18 @@ class HttpRequest {
 
             let ajax = new XMLHttpRequest();
 
-            let obj = {};
+           
 
             ajax.open(method.toUpperCase(), url);
 
             ajax.onerror = event => {
                 reject(e);
-            }
+            };
 
             ajax.onload = event => {
-
+                
+                let obj = {};
+                
                 try {
 
                     obj = JSON.parse(ajax.responseText);

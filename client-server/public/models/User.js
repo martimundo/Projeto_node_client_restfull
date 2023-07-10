@@ -1,4 +1,4 @@
-const e = require("express");
+//const e = require("express");
 
 class User {
 
@@ -125,7 +125,7 @@ class User {
 
             } else {
 
-                promise = HttpRequest.post(`/users/`, this.toJSon());
+                promise = HttpRequest.post(`/users`, this.toJSon());
             }
 
             promise.then(data => {
